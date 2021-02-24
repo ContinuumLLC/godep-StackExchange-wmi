@@ -14,7 +14,7 @@ import (
 	"time"
 
 	ole "github.com/ContinuumLLC/godep-go-ole-go-ole"
-	"github.com/go-ole/go-ole/oleutil"
+	"github.com/ContinuumLLC/godep-go-ole-go-ole/oleutil"
 )
 
 func TestQuery(t *testing.T) {

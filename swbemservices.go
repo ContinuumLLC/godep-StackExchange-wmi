@@ -9,7 +9,7 @@ import (
 	"sync"
 
 	ole "github.com/ContinuumLLC/godep-go-ole-go-ole"
-	"github.com/go-ole/go-ole/oleutil"
+	"github.com/ContinuumLLC/godep-go-ole-go-ole/oleutil"
 )
 
 // SWbemServices is used to access wmi. See https://msdn.microsoft.com/en-us/library/aa393719(v=vs.85).aspx
