@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	ole "github.com/go-ole/go-ole"
+	ole "github.com/ContinuumLLC/godep-go-ole-go-ole"
 	"github.com/go-ole/go-ole/oleutil"
 )
 
