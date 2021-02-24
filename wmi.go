@@ -2,13 +2,10 @@
 
 /*
 Package wmi provides a WQL interface for WMI on Windows.
-
 Example code to print names of running processes:
-
 	type Win32_Process struct {
 		Name string
 	}
-
 	func main() {
 		var dst []Win32_Process
 		q := wmi.CreateQuery(&dst, "")
@@ -20,7 +17,6 @@ Example code to print names of running processes:
 			println(i, v.Name)
 		}
 	}
-
 */
 package wmi
 
@@ -429,18 +425,6 @@ func (c *Client) loadEntity(dst interface{}, src *ole.IDispatch) (errFieldMismat
 					FieldName:  n,
 					Reason:     fmt.Sprintf("unsupported type (%T)", val),
 				}
-				break
-			}
-			// for string field if there is no value then do not return as error
-			// let it move to next field
-			if typeof == nil && f.Kind() == reflect.String {
-				of.Set(reflect.Zero(of.Type()))
-				break
-			}
-			return &ErrFieldMismatch{
-				StructType: of.Type(),
-				FieldName:  n,
-				Reason:     fmt.Sprintf("unsupported type (%T)", val),
 			}
 		}
 	}
